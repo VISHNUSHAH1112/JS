@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- 53, 53, 40, 40, 27, 27, .. -->
+
+    <script>
+        let n =prompt("Enter your number");
+
+        let a=53;
+        let b=40;
+        let i=1;
+
+        while(i<=n)
+    {
+        document.write(a," ");
+        document.write(b," ");
+
+        a-=13;
+        b-=13;
+
+        i++;
+    }
+    </script>
+</body>
+</html>
