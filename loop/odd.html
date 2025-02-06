@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- // wap to print only odd numbers using for/while/do..while loop. -->
+     <h1>for loop</h1>
+     <script>
+        let a =prompt(`Enter Your Number`);
+        a=parseInt(a);
+
+        let b=1;
+        for(b=1; b<=a; b+=2)
+     {
+        document.write(b," ")
+     }
+     </script>
+
+     <h1>while loop</h1>
+     <script>
+        let c=prompt(`Enter your number`);
+        c=parseInt(c);
+        let d=1;
+        while(d<=c)
+     {
+        document.write(d," ")
+        d+=2;
+     }
+     </script>
+     <h1>Do while</h1>
+
+     <script>
+        let e=prompt(`Enter your number`);
+        e = parseInt(e);
+
+        let f=1;
+
+        do{
+            document.write(f," ");
+            f+=2;
+        }while(f<=e);
+     </script>
+    
+</body>
+</html>
