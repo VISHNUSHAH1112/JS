@@ -1,22 +1,46 @@
-let input = document.getElementById("search");
-const btn1 = document.getElementById("btn1");
-const btn2 = document.getElementById("btn2");
-const btn3 = document.getElementById("btn3");
-const btn4 = document.getElementById("btn4");
-const btn5 = document.getElementById("btn5");
-const btn6 = document.getElementById("btn6");
-const btn7 = document.getElementById("btn7");
-const btn8 = document.getElementById("btn8");
-const btn9 = document.getElementById("btn9");
-const btn10 = document.getElementById("btn10");
-const btn11 = document.getElementById("btn+");
-const btn12 = document.getElementById("btn-");
-const btn13 = document.getElementById("btn*");
-const btn14 = document.getElementById("btn/");
+const one=document.getElementById('one')
+const two=document.getElementById('two')
 
-input.addEventListener("click",()=>{
-    function name(params) {
-        
-    }
+const plus=document.getElementById('plus')
+const minus=document.getElementById('minus')
+const multiply=document.getElementById('multiply')
+const divsion=document.getElementById('division')
+
+let ans=document.getElementById('ans')
+
+plus.addEventListener('click',()=>{
+    let o=parseInt(one.value);
+    let t=parseInt(two.value);
+
+    let sum=(o + t);
+
+    ans.innerHTML="Sum of " + o + " & " + t + " = " + sum;    
+
 })
 
+minus.addEventListener('click',()=>{
+    let o=parseInt(one.value);
+    let t=parseInt(two.value);
+
+    let minus=(o - t);
+
+    ans.innerHTML="minus of " +  o +" & "+ t + " = " +minus;
+})
+
+multiply.addEventListener('click',()=>{
+    let o=parseInt(one.value);
+    let t=parseInt(two.value);
+
+    let multiply=(o * t);
+
+    ans.innerHTML="multiply of " + o + " & " + t + " = " + multiply;
+})
+
+division.addEventListener('click',()=>{
+    let o=parseInt(one.value);
+    let t=parseInt(two.value);
+
+    let divsion=(o / t);
+
+    ans.innerHTML="Division of " + o + " & " + t + " = " + divsion;
+})
