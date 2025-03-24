@@ -25,3 +25,9 @@ Click the "Change Color" button.
 The background color will change to a randomly generated color.
 
 The RGB and HEX values of the color will be displayed on the screen.
+
+
+
+
+https://github.com/user-attachments/assets/24229933-6d71-41bd-9c24-140bc56f9afe
+
