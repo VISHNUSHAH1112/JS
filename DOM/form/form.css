@@ -1,0 +1,38 @@
+*
+{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.container
+{
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    border: 1px solid black;
+    width: 450px;
+    background-color: #EF9651;
+    /* justify-content: center; */
+    position: relative;
+    left: 530px;
+    top: 25px;
+    padding: 25px;
+    /* align-items: center; */
+}   
+input
+{
+    margin-bottom: 15px;
+    height: 45px;
+    padding-left: 5px;
+    background-color:#E07A5F;
+}
+::placeholder{
+    color: black;
+}
+button
+{
+    height: 45px;
+    color: black;
+    background-color: #E07A5F;
+    cursor: pointer;
+}
