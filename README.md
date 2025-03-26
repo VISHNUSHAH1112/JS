@@ -1,3 +1,4 @@
 # JS
 
-![javascript_logo](https://github.com/user-attachments/assets/3e997b43-1d4a-462d-910d-c4d06977f1cc)
+ <img src="![image](https://github.com/user-attachments/assets/c3a45140-6d23-4381-bde5-f98c8c5b087d)
+" alt="" style=" justify-content: center; align-items: center;">
