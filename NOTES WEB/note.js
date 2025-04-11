@@ -1,4 +1,4 @@
-$(document).ready(function () {
+
   let currentbox = 1;
 
   $("#btn").click(function () {
@@ -6,12 +6,15 @@ $(document).ready(function () {
 
     if (notetext === "") {
       alert("Please enter a note.");
+      
     }
 
     let box = $(`.box${currentbox}`);
     box.html(`
             <div class="note-content">${notetext}</div>
+            
             <button class="edit-btn">Edit</button>
+            
             <button class="delete-btn">Delete</button>
         `);
     currentbox++;
@@ -39,4 +42,3 @@ $(document).ready(function () {
       }
     }
   });
-});
