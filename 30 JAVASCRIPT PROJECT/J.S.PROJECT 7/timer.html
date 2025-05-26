@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>60 Second Timer</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #0f172a;
+            font-family: Arial, sans-serif;
+        }
+
+        .timer-container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+
+        .circle {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: conic-gradient(#22c55e 0% 0%, #1e293b 0% 100%);
+            animation: countdown 60s linear forwards;
+        }
+
+        @keyframes countdown {
+            from {
+                background: conic-gradient(#22c55e 0% 0%, #1e293b 0% 100%);
+            }
+
+            to {
+                background: conic-gradient(#22c55e 0% 100%, #1e293b 0% 0%);
+            }
+        }
+
+        .timer {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4rem;
+            color: #ffffff;
+            /* animation: shrinkText 60s linear forwards; */
+        }
+
+        @keyframes shrinkText {
+            0% {
+                font-size: 4rem;
+                opacity: 1;
+            }
+
+            100% {
+                font-size: 0rem;
+                opacity: 0;
+            }
+        }
+
+        .times-up {
+            position: absolute;
+            top: 50%;
+            left: 58%;
+            transform: translate(-50%, -50%);
+            color: #f43f5e;
+            font-size: 1.5rem;
+            opacity: 0;
+            animation: showText 1s ease-in forwards;
+            animation-delay: 60s;
+        }
+
+        @keyframes showText {
+            to {
+                opacity: 1;
+            }
+        }
+
+        button {
+            position: absolute;
+            bottom: -70px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 12px 24px;
+            font-size: 1rem;
+            color: #ffffff;
+            background-color: #3b82f6;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 130px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: 0.7s;
+
+        }
+
+        button:hover {
+            background-color: #2563eb;
+            transform: translateX(-50%) scale(1.05);
+            width: 150px;
+            transition: 0.7s;
+
+            
+        }
+
+        button:active {
+            background-color: #1d4ed8;
+            transform: translateX(-50%) scale(0.98);
+        }
+    </style>
+    <link rel="stylesheet" href="media.css">
+</head>
+
+<body>
+    <div class="timer-container">
+        <div class="circle"></div>
+        <h1 class="timer">60</h1>
+        <button>⏳ Ready?</button>
+        <div class="times-up">Time's Up!</div>
+    </div>
+</body>
+<script>
+    const timer1 = document.querySelector(".timer")
+    const button = document.querySelector("button")
+    const times_up = document.querySelector(".times-up")
+    let time = 60;
+
+    button.addEventListener("click", () => {
+        let timer2 = setInterval(() => {
+            if (time > 0) {
+                timer1.innerText = time
+                console.log(time)
+                time--
+
+
+            }
+            else {
+                clearInterval(timer2)
+                // timer1.innerText="Time's Up!"
+                //   times_up.style.opacity = 1;
+                timer1.innerText = ""; // Hide the "0"
+                times_up.style.opacity = 1; // Show "Time's Up!"
+                console.log(timer1)
+            }
+
+        }, 1000)
+
+    })
+    button.addEventListener("mouseover",()=>{
+         button.innerText = "Start Timer"; // Hover par text
+    })
+    button.addEventListener("mouseout", () => {
+    button.innerText = "⏳ Ready?"; // Mouse hataane par original text
+});
+</script>
+
+</html>

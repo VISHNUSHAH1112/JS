@@ -1,0 +1,76 @@
+/* 💻 Large screens (1024px and above) */
+@media (min-width: 1024px) {
+    .timer-container {
+        width: 250px;
+        height: 250px;
+    }
+
+    .timer {
+        font-size: 4.5rem;
+    }
+
+    .times-up {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 1.2rem;
+        width: 150px;
+    }
+
+    button:hover {
+        width: 160px;
+    }
+}
+
+/* 📱 Medium screens (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .timer-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    .timer {
+        font-size: 3.5rem;
+    }
+
+    .times-up {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 1rem;
+        width: 130px;
+    }
+
+    button:hover {
+        width: 150px;
+    }
+}
+
+/* 📱 Small screens (up to 767px) */
+@media (max-width: 767px) {
+    .timer-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .timer {
+        font-size: 2.5rem;
+    }
+
+    .times-up {
+        font-size: 1.2rem;
+        left: 60%; /* Better center for smaller screens */
+    }
+
+    button {
+        font-size: 0.9rem;
+        width: 120px;
+        padding: 10px 20px;
+    }
+
+    button:hover {
+        width: 140px;
+    }
+}
