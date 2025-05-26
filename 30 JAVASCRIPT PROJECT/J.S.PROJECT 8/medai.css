@@ -1,0 +1,57 @@
+/* Mobile Phones (portrait) */
+@media (max-width: 480px) {
+    #clock {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    #hours,
+    #minutes,
+    #seconds,
+    #half {
+        width: 70px;
+        height: 70px;
+        font-size: 24px;
+    }
+
+    span {
+        font-size: 30px;
+    }
+}
+
+/* Small Tablets and Large Phones */
+@media (max-width: 768px) {
+    #clock {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    #hours,
+    #minutes,
+    #seconds,
+    #half {
+        width: 80px;
+        height: 80px;
+        font-size: 28px;
+    }
+
+    span {
+        font-size: 36px;
+    }
+}
+
+/* Medium Devices (Tablet Landscape & Small Laptop) */
+@media (max-width: 1024px) {
+    #hours,
+    #minutes,
+    #seconds,
+    #half {
+        width: 90px;
+        height: 90px;
+        font-size: 32px;
+    }
+
+    span {
+        font-size: 40px;
+    }
+}

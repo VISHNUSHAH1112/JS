@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DIGITAL CLOCK</title>
+    <link rel="stylesheet" href="medai.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #clock {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #222;
+            gap: 10px;
+            font-family: Arial, sans-serif;
+        }
+
+
+        #hours,
+        #minutes,
+        #seconds,
+        #half {
+            width: 100px;
+            height: 100px;
+            font-size: 40px;
+            font-weight: bold;
+            color: #fff;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: changeColor 4s infinite;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transition: background-color 1s ease;
+        }
+
+        span {
+            font-size: 50px;
+            color: #fff;
+        }
+
+
+        @keyframes changeColor {
+            0% {
+                background-color: #fdcb6e;
+            }
+
+            25% {
+                background-color: #74b9ff;
+            }
+
+            50% {
+                background-color: #55efc4;
+            }
+
+            75% {
+                background-color: #fab1a0;
+            }
+
+            100% {
+                background-color: #fdcb6e;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="clock">
+        <div id="hours">00</div>
+        <span>:</span>
+        <div id="minutes">00</div>
+        <span>:</span>
+        <div id="seconds">00</div>
+        <div id="half">AM</div>
+    </div>
+
+</body>
+<script>
+    function timer() {
+        const now = new Date()
+        let hours = now.getHours()
+        let minutes = now.getMinutes()
+        let seconds = now.getSeconds()
+        let session = "AM"
+
+        if (hours >= 12) {
+            session = "PM"
+        }
+        if (hours == 0) {
+            hours = 12
+        }
+
+        hours = hours < 10 ? "0" + hours : hours
+        minutes = minutes < 10 ? "0" + minutes : minutes
+        seconds = seconds < 10 ? "0" + seconds : seconds
+
+
+        document.getElementById("hours").innerText = hours
+        document.getElementById("minutes").innerText = minutes
+        document.getElementById("seconds").innerText = seconds
+        document.getElementById("half").innerText = session
+    }
+
+
+    setInterval(timer, 1000)
+
+    timer()
+
+
+
+</script>
+
+</html>
