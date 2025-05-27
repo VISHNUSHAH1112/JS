@@ -1,4 +1,4 @@
-const questions = [
+const  questions = [
   {
     question: "What does HTML stand for?",
     options: [
