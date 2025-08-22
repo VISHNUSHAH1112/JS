@@ -13,7 +13,6 @@ body {
     align-items: center;
     height: 100vh;
 }
-
 .buttons {
     display: flex;
     justify-content: center;
@@ -83,4 +82,5 @@ body {
 
 .warning {
     background-color: #ff9800;
+
 }
